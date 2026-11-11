@@ -8,27 +8,27 @@ const services = [
     id: 1,
     title: "Data Analysis & Reporting",
     description:
-      "Mengungkap tren, mengidentifikasi pola, dan menyajikan laporan komprehensif untuk mendukung pengambilan keputusan strategis.",
+      "Uncover trends, identify patterns, and deliver comprehensive reports to support strategic decision-making.",
     icon: BarChart3,
   },
   {
     id: 2,
     title: "Dashboard Development",
-    description: "Membangun dashboard interaktif dengan Power BI dan Tableau.",
+    description: "Build interactive dashboards with Power BI and Tableau.",
     icon: LayoutDashboard,
   },
   {
     id: 3,
     title: "Machine Learning Solutions",
     description:
-      "Mengembangkan model prediktif dan algoritma AI untuk mengotomatisasi proses dan memprediksi hasil di masa depan.",
+      "Develop predictive models and AI algorithms to automate processes and forecast future outcomes.",
     icon: Brain,
   },
   {
     id: 4,
     title: "Data Visualization",
     description:
-      "Mengubah data kompleks menjadi visualisasi yang mudah dipahami dan menarik untuk dampak maksimal.",
+      "Transform complex data into visualizations that are easy to understand and drive maximum impact.",
     icon: PieChart,
   },
 ];

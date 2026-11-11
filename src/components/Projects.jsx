@@ -100,6 +100,8 @@ const Projects = () => {
                     <img
                       src={project.image}
                       alt={project.title}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
                     />
                   </div>
@@ -137,11 +139,6 @@ const Projects = () => {
                       <h3 className="text-xl md:text-2xl font-display font-bold text-stone-900 uppercase tracking-wide group-hover:text-stone-600 transition-colors duration-300">
                         {project.title}
                       </h3>
-                      {project.status === "ongoing" && (
-                        <span className="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full border border-amber-200">
-                          Ongoing {project.progress}%
-                        </span>
-                      )}
                     </div>
                     <p className="text-stone-400 text-sm mt-1">
                       {project.subtitle}

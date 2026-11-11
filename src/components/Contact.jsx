@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -66,7 +66,7 @@ const Contact = () => {
           {/* Social Links */}
           <div className="contact-links flex justify-center gap-8">
             <a
-              href="https://github.com/KAIKAI240307"
+              href="https://github.com/FadliArdi"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-stone-400 hover:text-stone-900 transition-colors duration-300 group"

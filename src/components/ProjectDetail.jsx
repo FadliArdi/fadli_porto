@@ -110,19 +110,11 @@ const ProjectDetail = () => {
             {/* Hero Section */}
             <div ref={headerRef} className="pt-32 pb-16 px-6 lg:px-16">
                 <div className="max-w-5xl mx-auto">
-                    {/* Category & Year & Status */}
+                    {/* Category & Year */}
                     <div className="detail-animate flex items-center gap-4 mb-8">
                         <span className="text-stone-400 text-sm">{project.category}</span>
                         <span className="text-stone-300">•</span>
                         <span className="text-stone-400 text-sm">{project.year}</span>
-                        {project.status === 'ongoing' && (
-                            <>
-                                <span className="text-stone-300">•</span>
-                                <span className="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">
-                                    In Progress ({project.progress}%)
-                                </span>
-                            </>
-                        )}
                     </div>
 
                     {/* Title */}
@@ -136,17 +128,6 @@ const ProjectDetail = () => {
 
                     {/* CTA Buttons */}
                     <div className="detail-animate flex flex-wrap gap-4">
-                        {project.hasDocumentation && (
-                            <Link
-                                to={`/project/${id}/docs`}
-                                className="flex items-center gap-2 px-6 py-3 bg-stone-900 text-white rounded-full text-sm hover:bg-stone-700 transition-colors"
-                            >
-                                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                </svg>
-                                View Documentation
-                            </Link>
-                        )}
                         {project.github && (
                             <a
                                 href={project.github}
@@ -186,6 +167,8 @@ const ProjectDetail = () => {
                                 <img
                                     src={img}
                                     alt={`${project.title} screenshot ${idx + 1}`}
+                                    loading="lazy"
+                                    decoding="async"
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
                                 {/* Hover Overlay */}
@@ -295,9 +278,25 @@ const ProjectDetail = () => {
                                     </div>
                                     <p className="text-stone-400 text-sm uppercase tracking-widest">The Solution</p>
                                 </div>
-                                <p className="text-lg md:text-xl text-stone-700 leading-relaxed mb-8">
-                                    {project.caseStudy.solution}
-                                </p>
+                                {Array.isArray(project.caseStudy.solution) ? (
+                                    <div className="space-y-4 mb-8">
+                                        {project.caseStudy.solution.map((item, index) => (
+                                            <div
+                                                key={index}
+                                                className="flex items-start gap-4 p-5 bg-stone-50 border border-stone-100 rounded-xl"
+                                            >
+                                                <span className="w-6 h-6 rounded-full bg-stone-200 flex items-center justify-center text-xs font-medium text-stone-600 flex-shrink-0">
+                                                    {index + 1}
+                                                </span>
+                                                <p className="text-stone-700 leading-relaxed">{item}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                ) : (
+                                    <p className="text-lg md:text-xl text-stone-700 leading-relaxed mb-8">
+                                        {project.caseStudy.solution}
+                                    </p>
+                                )}
                                 
                                 {/* Technologies */}
                                 <div className="pt-6 border-t border-stone-100">
@@ -322,7 +321,7 @@ const ProjectDetail = () => {
                         <>
                             <div className="w-full h-px bg-stone-200" />
                             <section className="detail-section">
-                                <p className="text-stone-400 text-sm uppercase tracking-widest mb-8">Impact & Results</p>
+                                <p className="text-stone-400 text-sm uppercase tracking-widest mb-8">Impact</p>
                                 <div className="grid md:grid-cols-3 gap-6">
                                     {project.caseStudy.impact.map((item, idx) => (
                                         <div
@@ -336,6 +335,21 @@ const ProjectDetail = () => {
                                         </div>
                                     ))}
                                 </div>
+
+                                {/* Results */}
+                                {project.caseStudy.results && (
+                                    <div className="mt-12">
+                                        <p className="text-stone-400 text-sm uppercase tracking-widest mb-6">Results</p>
+                                        <ul className="space-y-3">
+                                            {project.caseStudy.results.map((result, idx) => (
+                                                <li key={idx} className="flex items-start gap-3">
+                                                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                                                    <p className="text-stone-700 leading-relaxed">{result}</p>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
                             </section>
                         </>
                     )}
@@ -447,6 +461,8 @@ const ProjectDetail = () => {
                                         <img
                                             src={relProject.image}
                                             alt={relProject.title}
+                                            loading="lazy"
+                                            decoding="async"
                                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                         />
                                     </div>

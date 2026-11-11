@@ -22,7 +22,7 @@ const Footer = () => {
           {/* Links */}
           <div className="flex items-center gap-8">
             <a
-              href="https://github.com/KAIKAI240307"
+              href="https://github.com/FadliArdi"
               target="_blank"
               rel="noopener noreferrer"
               className="text-stone-400 hover:text-stone-900 text-sm transition-colors duration-300 uppercase tracking-wider"
@@ -30,7 +30,7 @@ const Footer = () => {
               GitHub
             </a>
             <a
-              href="https://www.linkedin.com/in/fadli-ardiansyah-harahap-9629a322b/"
+              href="https://www.linkedin.com/in/fadli-ardiansyah-harahap"
               target="_blank"
               rel="noopener noreferrer"
               className="text-stone-400 hover:text-stone-900 text-sm transition-colors duration-300 uppercase tracking-wider"

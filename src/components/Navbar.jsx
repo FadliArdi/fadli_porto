@@ -53,6 +53,8 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
+          aria-expanded={isOpen}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
           className="md:hidden text-stone-900 hover:text-stone-600 transition-colors"
           onClick={() => setIsOpen(!isOpen)}
         >

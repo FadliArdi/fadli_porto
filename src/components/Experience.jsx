@@ -9,7 +9,7 @@ const experiences = [
     company: "WarungFadli",
     period: "2015 - Present",
     description:
-      "Mengelola operasional toko meliputi inventaris, transaksi penjualan, pelayanan pelanggan, pencatatan keuangan sederhana, serta kebersihan dan kerapihan toko.",
+      "Manage store operations including inventory, sales transactions, customer service, basic bookkeeping, and store upkeep.",
   },
   {
     id: 2,
@@ -17,7 +17,17 @@ const experiences = [
     company: "HansKongkow Warmindo",
     period: "Oktober 2024 - Januari 2025",
     description:
-      "Melaksanakan pengujian menyeluruh untuk sistem e-commerce meliputi fungsionalitas pemesanan, payment gateway, autentikasi pengguna, dan responsivitas UI/UX lintas perangkat.",
+      "Performed end-to-end testing of an e-commerce system covering ordering flow, payment gateway, user authentication, and cross-device UI/UX responsiveness.",
+  },
+  {
+    id: 3,
+    role: "Data Annotator",
+    company: "PT. Daligent Solusi Indonesia",
+    period: "Mar 2026 – Sep 2026",
+    description:
+      "Analyzed and validated image and point cloud datasets for autonomous driving using industry-standard annotation software, accelerating model training cycles by ensuring high-fidelity ground truth data.",
+    "Met a target of at least 20 annotation tasks per day, each covering 40 image frames.":
+      "Maintained data quality of at least 98% and consistently achieved 100% accuracy in quality evaluations.",
   },
 ];
 
@@ -103,9 +113,18 @@ const Experience = () => {
                     </p>
                   </div>
                 </div>
-                <p className="text-stone-500 text-sm leading-relaxed md:max-w-md md:text-right">
-                  {exp.description}
-                </p>
+                <div className="md:max-w-md md:text-right">
+                  <p className="text-stone-500 text-sm leading-relaxed">
+                    {exp.description}
+                  </p>
+                  {exp.bullets && (
+                    <ul className="mt-3 space-y-1 text-stone-500 text-sm list-disc pl-5 md:text-left">
+                      {exp.bullets.map((bullet, i) => (
+                        <li key={i}>{bullet}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </div>
             </div>
           ))}

@@ -12,37 +12,37 @@ const About = () => {
       id: 1,
       title: "Fundamental DBMS",
       issuer: "Professional Certification",
-      image: "/images/certifications/fundamental-dbms.png",
+      image: "/images/certifications/fundamental-dbms.webp",
     },
     {
       id: 2,
       title: "Oracle for Beginner",
       issuer: "Oracle Database",
-      image: "/images/certifications/oracle-beginer.png",
+      image: "/images/certifications/oracle-beginer.webp",
     },
     {
       id: 3,
       title: "SQL Server for Beginner",
       issuer: "Microsoft SQL Server",
-      image: "/images/certifications/sqlserver-beginer.png",
+      image: "/images/certifications/sqlserver-beginer.webp",
     },
     {
       id: 4,
       title: "Oracle for Intermediate",
       issuer: "Oracle Database",
-      image: "/images/certifications/oracle-intermediate.png",
+      image: "/images/certifications/oracle-intermediate.webp",
     },
     {
       id: 5,
       title: "SQL Server for Intermediate",
       issuer: "Microsoft SQL Server",
-      image: "/images/certifications/sqlserver-intermediate.png",
+      image: "/images/certifications/sqlserver-intermediate.webp",
     },
     {
       id: 6,
       title: "Data Science",
       issuer: "Data Science Certification",
-      image: "/images/certifications/data-science.png",
+      image: "/images/certifications/data-science.webp",
     },
   ];
 
@@ -152,8 +152,10 @@ const About = () => {
               <div className="about-intro">
                 <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-stone-200 group">
                   <img
-                    src="images/projects/pp.png"
+                    src="/images/projects/pp.webp"
                     alt="Fadli Ardiansyah Harahap"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
@@ -312,6 +314,7 @@ const About = () => {
               <button
                 onClick={() => setSelectedCert(null)}
                 className="p-2 hover:bg-stone-100 rounded-full transition-colors"
+                aria-label="Close certificate"
               >
                 <svg
                   className="w-6 h-6 text-stone-500"
@@ -332,6 +335,8 @@ const About = () => {
               <img
                 src={selectedCert.image}
                 alt={selectedCert.title}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-auto rounded-lg shadow-lg"
                 onError={(e) => {
                   e.target.onerror = null;

@@ -79,10 +79,10 @@ const Hero = () => {
         <div className="mb-10">
           <h1 className="hero-line text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-bold text-stone-900 leading-[0.9] uppercase tracking-tight">
             Every Data
-          </h1>
-          <h1 className="hero-line text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-bold leading-[0.9] uppercase tracking-tight mt-2">
-            <span className="text-stone-900">Tells A </span>
-            <span className="text-stone-400">Story</span>
+            <span className="block mt-2">
+              <span className="text-stone-900">Tells A </span>
+              <span className="text-stone-400">Story</span>
+            </span>
           </h1>
         </div>
 

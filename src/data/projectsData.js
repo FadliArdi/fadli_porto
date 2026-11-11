@@ -1,258 +1,248 @@
-// Data untuk semua projects yang pernah Anda kerjakan
-// Anda bisa menambahkan/edit data di sini dengan mudah
+// Data for all projects you have worked on
+// You can add/edit data here easily
 
 export const projectsData = [
-    {
-        id: 1,
-        title: "SIBI Sign Language translation",
-        subtitle: "Sign Language Translation Android App",
-        category: "Mobile App",
-        description: "SIBI adalah sebuah aplikasi android yang dapat menerjemahkan bahasa Isyarat Indonesia (SIBI) menjadi sebuah teks ",
-        detailedDescription: "SIBI adalah aplikasi android yang dapat menerjemahkan bahasa Isyarat Indonesia (SIBI) menjadi sebuah teks. Aplikasi ini menggunakan teknologi Machine Learning untuk menganalisis gambar yang di tangkap oleh kamera secara real-time dan menghasilkan teks huruf yang sesuai dengan huruf dari gestur bahasa isyarat SIBI",
-        year: "2025",
-        awards: "",
-        image: "/images/projects/SIBI2.jpg",
-        images: [
-            "/images/projects/SIBI3.jpg",
-            "/images/projects/SIBI4.jpg",
-            "/images/projects/SIBI5.jpg"
-        ],
-        technologies: ["TensorFlow", "Python", "Android", "Kotlin"],
-        
-        // Case Study
-        caseStudy: {
-            challenge: "Komunitas tunarungu di Indonesia menghadapi kesulitan dalam berkomunikasi dengan masyarakat umum karena minimnya pemahaman tentang bahasa isyarat SIBI. Diperlukan solusi teknologi yang dapat menjembatani komunikasi ini secara real-time dan mudah diakses.",
-            approach: [
-                "Mengumpulkan dan mempersiapkan dataset gambar gestur tangan SIBI untuk 26 huruf alphabet",
-                "Membangun dan melatih model Machine Learning menggunakan TensorFlow untuk pengenalan gestur",
-                "Mengoptimasi model untuk dapat berjalan di perangkat Android dengan resource terbatas",
-                "Mengintegrasikan model ke dalam aplikasi Android yang user-friendly"
-            ],
-            solution: "Dikembangkan aplikasi Android yang menggunakan kamera device untuk menangkap gestur tangan secara real-time dan menerjemahkannya menjadi teks alfabet. Model ML dioptimasi menggunakan TensorFlow Lite untuk performa optimal di mobile device.",
-            impact: [
-                { metric: "95%", label: "Akurasi Deteksi" },
-                { metric: "26", label: "Huruf SIBI" },
-                { metric: "Real-time", label: "Proses Translasi" }
-            ]
-        },
-        
-        // Process per project
-        process: [
-            { step: 1, title: "Research", description: "Mempelajari gestur SIBI dan kebutuhan komunitas tunarungu" },
-            { step: 2, title: "Data Collection", description: "Mengumpulkan dataset gambar gestur tangan" },
-            { step: 3, title: "Model Training", description: "Melatih model TensorFlow untuk pengenalan gestur" },
-            { step: 4, title: "Optimization", description: "Mengoptimasi model untuk perangkat mobile" },
-            { step: 5, title: "Development", description: "Membangun aplikasi Android dengan Kotlin" },
-            { step: 6, title: "Testing", description: "Pengujian akurasi dan performa aplikasi" }
-        ],
-        
-        link: "#",
-        github: "https://github.com/KAIKAI240307/SIBI-aplikasi-pengenalan-bahasa-isyarat-.git",
+  {
+    id: 1,
+    title: "SIBI Sign Language Translation",
+    subtitle: "Android App + Machine Learning",
+    category: "AI / ML & Mobile App",
+    detailedDescription:
+      "SIBI is an Android app that translates Indonesian Sign Language (SIBI) gestures into text. The app uses Machine Learning to analyze images captured by the camera in real-time and generate matching letters from sign language gestures.",
+    year: "2024–2025",
+    image: "/images/projects/SIBI2.webp",
+    images: [
+      "/images/projects/SIBI3.webp",
+      "/images/projects/SIBI4.webp",
+      "/images/projects/SIBI5.webp",
+    ],
+    technologies: [
+      "TensorFlow",
+      "TensorFlow Lite",
+      "Python",
+      "Android",
+      "Kotlin",
+      "Computer Vision",
+    ],
+
+    // Case Study
+    caseStudy: {
+      challenge:
+        "The deaf community in Indonesia struggles to communicate with the general public due to limited understanding of SIBI sign language. A technology solution is needed to bridge this communication in real-time and be easily accessible.",
+      approach: [
+        "Collecting gesture hand dataset for each SIBI alphabet letter",
+        "Preprocessing and data augmentation to increase training data variation",
+        "Building and training a CNN model using TensorFlow",
+        "Optimizing model with TensorFlow Lite for performance on Android devices with limited resources",
+        "Integrating the model into a user-friendly Android app",
+      ],
+      solution:
+        "Developed an Android app that uses the device camera to capture hand gestures in real-time and translate them into alphabet letters. The ML model is optimized using TensorFlow Lite for optimal performance on mobile devices.",
+      impact: [
+        { metric: "95%", label: "Detection Accuracy" },
+        { metric: "26", label: "SIBI Letters" },
+        { metric: "Real-time", label: "Translation Process" },
+      ],
     },
-    {
-        id: 2,
-        title: "HansKongkow Warmindo",
-        subtitle: "Company Profile",
-        category: "Web App",
-        description: "Situs web profil perusahaan yang komprehensif untuk HansKongkow Warmindo dengan design yang modern dan layout yang responsif.",
-        detailedDescription: "HansKongkow Warmindo adalah platform company profile yang dilengkapi dengan tampilan menu yang disajikan di Hanskongkow Warmindo dengan fitur-fitur yang lengkap seperti pemesanan. dan pembayaran yang bisa dilakukan dengan transfer antar bank, ataupun qris.",
-        year: "2024",
-        awards: "",
-        image: "/images/projects/handkonkow (2).png",
-        images: [
-            "/images/projects/handkonkow (2).png",
-            "/images/projects/handkonkow (1).png",
-            "/images/projects/handkonkow (3).png"
-        ],
-        technologies: ["React", "Node.js", "Prisma", "PostMan"],
-        
-        // Case Study
-        caseStudy: {
-            challenge: "HansKongkow Warmindo membutuhkan platform digital untuk meningkatkan presence online dan memudahkan pelanggan dalam melihat menu serta melakukan pemesanan. Sistem manual sebelumnya menyebabkan ketidakefisienan dalam proses order dan pembayaran.",
-            approach: [
-                "Analisis kebutuhan bisnis dan user flow untuk pemesanan makanan",
-                "Desain UI/UX yang modern dan mudah digunakan",
-                "Implementasi sistem pemesanan dan payment gateway",
-                "Pengembangan backend dengan Node.js dan Prisma ORM"
-            ],
-            solution: "Platform web yang terintegrasi dengan sistem pemesanan online dan multiple payment gateway (transfer bank dan QRIS). Dilengkapi dengan dashboard admin untuk manajemen order dan menu.",
-            impact: [
-                { metric: "2x", label: "Peningkatan Order" },
-                { metric: "QRIS", label: "Payment Integration" },
-                { metric: "100%", label: "Digital Menu" }
-            ]
-        },
-        
-        // Process per project
-        process: [
-            { step: 1, title: "Discovery", description: "Memahami kebutuhan bisnis warmindo" },
-            { step: 2, title: "Design", description: "Merancang UI/UX yang user-friendly" },
-            { step: 3, title: "Development", description: "Membangun frontend dan backend" },
-            { step: 4, title: "Integration", description: "Integrasi payment gateway" },
-            { step: 5, title: "QA Testing", description: "Pengujian fungsionalitas sistem" },
-            { step: 6, title: "Deployment", description: "Peluncuran dan maintenance" }
-        ],
-        
-        link: "#",
-        github: "https://github.com/Huzaisa/Hans.git",
+
+    // Process per project
+    process: [
+      {
+        step: 1,
+        title: "Research",
+        description: "Studying SIBI gestures and needs of the deaf community",
+      },
+      {
+        step: 2,
+        title: "Data Collection",
+        description: "Collecting hand gesture dataset images",
+      },
+      {
+        step: 3,
+        title: "Preprocessing",
+        description: "Augmentation and data normalization",
+      },
+      {
+        step: 4,
+        title: "Model Training",
+        description: "Training CNN model using TensorFlow",
+      },
+      {
+        step: 5,
+        title: "Optimization",
+        description: "Optimizing model with TensorFlow Lite for mobile",
+      },
+      {
+        step: 6,
+        title: "Development & Testing",
+        description: "Building Android app with Kotlin and accuracy testing",
+      },
+    ],
+
+    github:
+      "https://github.com/FadliArdi/SIBI-aplikasi-pengenalan-bahasa-isyarat-",
+  },
+  {
+    id: 2,
+    title: "HansKongkow Warmindo",
+    subtitle: "Company Profile",
+    category: "Web App",
+    detailedDescription:
+      "HansKongkow Warmindo is a company profile platform equipped with menus and complete features such as ordering and payment via bank transfer or QRIS.",
+    year: "2024",
+    image: "/images/projects/handkonkow (2).webp",
+    images: [
+      "/images/projects/handkonkow (2).webp",
+      "/images/projects/handkonkow (1).webp",
+      "/images/projects/handkonkow (3).webp",
+    ],
+    technologies: ["React", "Node.js", "Prisma", "PostMan"],
+
+    // Case Study
+    caseStudy: {
+      challenge:
+        "HansKongkow Warmindo needed a digital platform to increase online presence and make it easier for customers to view menus and place orders. The previous manual system caused inefficiency in order and payment processes.",
+      approach: [
+        "Analyzing business needs and user flow for food ordering",
+        "Designing modern and easy-to-use UI/UX",
+        "Implementing ordering system and payment gateway",
+        "Backend development with Node.js and Prisma ORM",
+      ],
+      solution:
+        "Web platform integrated with online ordering system and multiple payment gateways (bank transfer and QRIS). Equipped with admin dashboard for order and menu management.",
+      impact: [
+        { metric: "2x", label: "Order Increase" },
+        { metric: "QRIS", label: "Payment Integration" },
+        { metric: "100%", label: "Digital Menu" },
+      ],
     },
-    {
-        id: 3,
-        title: "Sistem Pengenalan Bahasa Isyarat Indonesia",
-        subtitle: "Machine Learning",
-        category: "AI / ML",
-        description: "Machine Learning model yang didesain untuk mengenali bahasa isyarat Indonesia (SIBI).",
-        detailedDescription: "Sistem machine learning yang dapat mengenali bahasa isyarat Indonesia (SIBI) menggunakan data gambar tangan yang diambil melalui kamera. Sistem ini menganalisis pola dari gambar tangan dan memberikan prediksi huruf yang sesuai dengan gestur tangan yang diambil oleh kamera.",
-        year: "2024",
-        awards: "Best Tech",
-        image: "/images/projects/ai-identity.png",
-        images: [
-            "/images/projects/ai-identity.png",
-            "/images/projects/sibibefore (1).png",
-            "/images/projects/sibibefore (2).png"
-        ],
-        technologies: ["Python", "TensorFlow", "Computer Vision", "Machine Learning"],
-        
-        // Case Study
-        caseStudy: {
-            challenge: "Diperlukan sistem yang dapat mengenali gestur bahasa isyarat Indonesia (SIBI) secara akurat menggunakan computer vision. Tantangannya adalah membuat model yang cukup akurat namun tetap ringan untuk digunakan dalam aplikasi real-time.",
-            approach: [
-                "Pengumpulan dataset gestur tangan untuk setiap huruf alphabet SIBI",
-                "Preprocessing dan augmentasi data untuk meningkatkan variasi training data",
-                "Eksperimen dengan berbagai arsitektur CNN untuk menemukan model optimal",
-                "Fine-tuning hyperparameter untuk mencapai akurasi maksimal"
-            ],
-            solution: "Model CNN yang dilatih menggunakan TensorFlow dengan arsitektur yang dioptimasi untuk pengenalan gestur tangan. Model mampu melakukan prediksi real-time dengan akurasi tinggi pada kondisi pencahayaan yang memadai.",
-            impact: [
-                { metric: "95%", label: "Akurasi Model"},
-                { metric: "26", label: "Kelas Gestur"},
-                { metric: "Realtime", label: "Translation"}
-            ]
-        },
-        
-        // Process per project
-        process: [
-            { step: 1, title: "Data Collection", description: "Mengumpulkan ribuan gambar gestur SIBI" },
-            { step: 2, title: "Preprocessing", description: "Augmentasi dan normalisasi data" },
-            { step: 3, title: "Architecture Design", description: "Merancang arsitektur CNN optimal" },
-            { step: 4, title: "Training", description: "Melatih model dengan dataset" },
-            { step: 5, title: "Evaluation", description: "Evaluasi akurasi dan fine-tuning" },
-            { step: 6, title: "Deployment", description: "Export model untuk production" }
-        ],
-        
-        link: "#",
+
+    // Process per project
+    process: [
+      {
+        step: 1,
+        title: "Discovery",
+        description: "Understanding warmindo business needs",
+      },
+      {
+        step: 2,
+        title: "Design",
+        description: "Designing user-friendly UI/UX",
+      },
+      {
+        step: 3,
+        title: "Development",
+        description: "Building frontend and backend",
+      },
+      {
+        step: 4,
+        title: "Integration",
+        description: "Payment gateway integration",
+      },
+      {
+        step: 5,
+        title: "QA Testing",
+        description: "System functionality testing",
+      },
+      { step: 6, title: "Deployment", description: "Launch and maintenance" },
+    ],
+  },
+  {
+    id: 3,
+    title: "UK Online Retail Data Analysis",
+    subtitle: "Data Analyst Project",
+    category: "Data Analysis",
+    detailedDescription:
+      "Data analyst project analyzing ~541K UK online retail transactions (Dec 2010–Dec 2011). Covers data cleaning (541,909 → 391,150 rows), exploratory analysis, RFM segmentation (k=3), market basket analysis (Apriori), and Power BI / Tableau dashboards. Key outputs: revenue trend, customer segments, and cross-selling rules.",
+    year: "2025",
+    image: "/images/projects/E-commerce_analytic.webp",
+    images: ["/images/projects/E-commerce_analytic.webp"],
+    technologies: [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Scikit-Learn (K-Means)",
+      "Matplotlib",
+      "Seaborn",
+      "Mlxtend (Apriori)",
+      "Power BI",
+      "Tableau",
+    ],
+
+    // Case Study
+    caseStudy: {
+      challenge:
+        "UK online retail has large transaction data that isn't used optimally for business decisions. A deep analysis is needed to understand customer behavior and improve business strategy.",
+      approach: [
+        "Set up environment and import UK retail dataset (ISO-8859-1 encoding)",
+        "Clean data: drop duplicates, remove rows without CustomerID, remove cancelled invoices, invalid quantity/price, and non-product stock codes",
+        "Standardize text and compute revenue (quantity × unit price)",
+        "Exploratory analysis: monthly revenue, average order value, revenue by country",
+        "RFM segmentation with k=3 K-Means clustering (log transform, outlier clipping)",
+        "Market basket analysis with Apriori (top 150 UK products)",
+        "Visualize results with Power BI and Tableau",
+      ],
+      solution: [
+        "Revenue & country mix dashboard — UK accounts for 83% of revenue",
+        "Customer segmentation dashboard — three clusters: Champions (17% of customers, 67% of revenue), Loyal (38%, 25%), At Risk (44%, 8%)",
+        "Market basket dashboard — top cross-selling rules such as teacup sets, Christmas ornaments, card games, bags, and picture frames",
+      ],
+      impact: [
+        { metric: "£8.74M", label: "Total revenue analyzed" },
+        { metric: "83%", label: "Revenue share from UK" },
+        { metric: "67%", label: "Revenue from Champions segment" },
+      ],
+      results: [
+        "Q4 (Sep–Nov 2011) delivers ≈ £3.08M — about 35% of annual revenue; November peaks at £1.14M",
+        "A Champions customer is worth ≈ 22× an At Risk customer (£7,709 vs £354)",
+        "Loyal = 38% of customers / 25% of revenue — best pool to upgrade into Champions",
+        "At Risk = 44% of customers but only 8% of revenue — run low-cost win-back campaigns",
+        "Top cross-selling rule: Wooden Heart ↔ Wooden Star Christmas Scandinavian (lift 24.3)",
+      ],
     },
-    {
-        id: 4,
-        title: "Analisis Data Retail Online (UK)",
-        subtitle: "Data Analyst Project",
-        category: "Data Analysis",
-        description: "Analisis komprehensif data retail online UK menggunakan Python, termasuk RFM Analysis, Customer Segmentation, dan Business Metrics dengan visualisasi di Power BI & Tableau.",
-        detailedDescription: "Project data analyst yang menganalisis dataset retail online dari UK. Mencakup data cleaning, exploratory analysis, RFM segmentation, business metrics (AOV, CLV, Retention Rate), K-Means clustering, dan market basket analysis. Output berupa 5 dashboard di Power BI dan Tableau.",
-        year: "2025",
-        awards: "",
-        status: "ongoing",
-        progress: 25,
-        image: "/images/projects/E-commerce_analytic.png",
-        images: [
-            "/images/projects/E-commerce_analytic.png"
-        ],
-        technologies: ["Python", "Pandas", "NumPy", "Scikit-learn", "Power BI", "Tableau", "SQL"],
-        
-        // Case Study (partial - project ongoing)
-        caseStudy: {
-            challenge: "Retail online UK memiliki data transaksi dalam jumlah besar namun belum dimanfaatkan secara optimal untuk pengambilan keputusan bisnis. Diperlukan analisis mendalam untuk memahami perilaku pelanggan dan meningkatkan strategi bisnis.",
-            approach: [
-                "Setup environment dan import dataset retail UK",
-                "Data cleaning: handling missing values, duplicates, dan outliers",
-                "Exploratory Data Analysis untuk memahami pola data",
-                "RFM Analysis untuk segmentasi pelanggan",
-                "Perhitungan business metrics (AOV, CLV, Retention Rate)",
-                "Visualisasi dengan Power BI dan Tableau"
-            ],
-            solution: "Project ini sedang dalam pengembangan. Output yang direncanakan adalah 5 dashboard interaktif yang menampilkan insights tentang customer segmentation, sales performance, dan business metrics.",
-            impact: [
-                { metric: "25%", label: "Progress" },
-                { metric: "5", label: "Dashboard Planned" },
-                { metric: "RFM", label: "Segmentation" }
-            ]
-        },
-        
-        // Process per project
-        process: [
-            { step: 1, title: "Setup", description: "Environment & library setup" },
-            { step: 2, title: "Data Loading", description: "Import dan eksplorasi awal data" },
-            { step: 3, title: "Data Cleaning", description: "Cleaning dan preprocessing" },
-            { step: 4, title: "EDA", description: "Exploratory Data Analysis" },
-            { step: 5, title: "Analysis", description: "RFM & Business Metrics" },
-            { step: 6, title: "Visualization", description: "Dashboard Power BI & Tableau" }
-        ],
-        
-        phases: [
-            { 
-                id: 1, 
-                name: "Setup", 
-                status: "completed", 
-                description: "Environment & library setup",
-                details: "Menyiapkan environment Python dengan Jupyter Notebook, menginstall dan mengimport library yang diperlukan seperti Pandas, NumPy, Matplotlib, Seaborn, dan Scikit-learn.",
-                documents: []
-            },
-            { 
-                id: 2, 
-                name: "Data Loading", 
-                status: "in-progress", 
-                description: "Import dan eksplorasi awal data",
-                details: "Memuat dataset retail online UK, melakukan eksplorasi awal untuk memahami struktur data, tipe data, dan statistik deskriptif dasar.",
-                documents: []
-            },
-            { 
-                id: 3, 
-                name: "Data Cleaning", 
-                status: "pending", 
-                description: "Cleaning dan preprocessing",
-                details: "Membersihkan data dengan menangani missing values, menghapus duplikat, mengidentifikasi dan menangani outliers, serta menyesuaikan tipe data.",
-                documents: []
-            },
-            { 
-                id: 4, 
-                name: "EDA", 
-                status: "pending", 
-                description: "Exploratory Data Analysis",
-                details: "Melakukan analisis deskriptif mendalam, menganalisis pola data, distribusi, korelasi, dan insight awal dari dataset.",
-                documents: []
-            },
-            { 
-                id: 5, 
-                name: "Analysis", 
-                status: "pending", 
-                description: "RFM & Business Metrics",
-                details: "Menghitung RFM segmentation, AOV (Average Order Value), CLV (Customer Lifetime Value), Retention Rate, dan Churn Rate.",
-                documents: []
-            },
-            { 
-                id: 6, 
-                name: "Visualization", 
-                status: "pending", 
-                description: "Dashboard Power BI & Tableau",
-                details: "Membuat 5 dashboard interaktif di Power BI dan Tableau untuk visualisasi customer segmentation, sales performance, dan business metrics.",
-                documents: []
-            }
-        ],
-        link: "#",
-        github: "",
-        hasDocumentation: true
-    },
-    
+
+    // Process per project
+    process: [
+      { step: 1, title: "Setup", description: "Environment & library setup" },
+      {
+        step: 2,
+        title: "Data Loading",
+        description: "Import and initial data exploration",
+      },
+      {
+        step: 3,
+        title: "Data Cleaning",
+        description: "Cleaning and preprocessing",
+      },
+      { step: 4, title: "EDA", description: "Exploratory Data Analysis" },
+      {
+        step: 5,
+        title: "Analysis",
+        description: "RFM segmentation & K-Means clustering",
+      },
+      {
+        step: 6,
+        title: "Visualization",
+        description: "Power BI & Tableau dashboards",
+      },
+    ],
+
+    github:
+      "https://github.com/FadliArdi/E-Commerce-Customer-Analytics-Segmentation.git",
+  },
 ];
 
-// Helper function untuk mendapatkan project berdasarkan ID
+// Helper function to get project by ID
 export const getProjectById = (id) => {
-    return projectsData.find(project => project.id === parseInt(id));
+  return projectsData.find((project) => project.id === parseInt(id));
 };
 
-// Helper function untuk mendapatkan project terkait
+// Helper function to get related projects
 export const getRelatedProjects = (currentId, category, limit = 3) => {
-    return projectsData
-        .filter(project => project.id !== parseInt(currentId) && project.category === category)
-        .slice(0, limit);
+  return projectsData
+    .filter(
+      (project) =>
+        project.id !== parseInt(currentId) && project.category === category,
+    )
+    .slice(0, limit);
 };

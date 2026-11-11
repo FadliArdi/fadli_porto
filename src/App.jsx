@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 import { gsap } from "gsap";
@@ -15,12 +15,13 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ProjectDetail from "./components/ProjectDetail";
 
-import ProjectDocumentation from "./components/ProjectDocumentation";
-
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   useEffect(() => {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) return;
+
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -32,12 +33,17 @@ function App() {
       touchMultiplier: 2,
     });
 
+    let rafId;
     function raf(time) {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      rafId = requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf);
+    rafId = requestAnimationFrame(raf);
+    return () => {
+      cancelAnimationFrame(rafId);
+      lenis.destroy();
+    };
   }, []);
 
   return (
@@ -62,10 +68,27 @@ function App() {
             }
           />
           <Route path="/project/:id" element={<ProjectDetail />} />
-          <Route path="/project/:id/docs" element={<ProjectDocumentation />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </BrowserRouter>
+  );
+}
+
+function NotFound() {
+  return (
+    <div className="min-h-screen bg-primary flex items-center justify-center px-6">
+      <div className="text-center">
+        <h1 className="text-6xl font-display font-bold text-stone-900 mb-4">404</h1>
+        <p className="text-stone-500 mb-8">Page not found.</p>
+        <Link
+          to="/"
+          className="inline-block px-6 py-3 bg-stone-900 text-white rounded-full text-sm hover:bg-stone-700 transition-colors"
+        >
+          Back to Home
+        </Link>
+      </div>
+    </div>
   );
 }
 
